@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="35" viewBox="0 0 154 35" role="img" aria-label="petworld">
+  <rect width="35" height="35" rx="8" fill="#fff" stroke="#e6e6e6"/>
+  <rect x="1" y="9" width="32" height="18" rx="4" fill="#2d2d2d"/>
+  <rect x="7" y="10" width="20" height="3" rx="1.5" fill="#fff"/>
+  <text x="17" y="22" font-family="Poppins, Arial, sans-serif" font-size="6" font-weight="600" fill="#fff" text-anchor="middle">12kg</text>
+  <text x="45" y="25" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="#2d2d2d">petworld</text>
+</svg>
