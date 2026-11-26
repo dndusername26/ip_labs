@@ -1,0 +1,278 @@
+/* Базові стилі сторінки */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Клас для тексту, прихованого візуально, але доступного для screen reader */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    padding: 8px 12px;
+    background: #fff;
+    color: #0654b3;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* Шапка та меню */
+.site-header {
+    background-color: #333;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin: 10px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+/* Home */
+#home {
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#home h1 {
+    color: #0654b3;
+}
+
+#home p {
+    line-height: 1.6;
+}
+
+h2 {
+    color: #0654b3;
+}
+
+/* Trivia */
+.trivia-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.trivia-item img {
+    width: 150px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.trivia-item h3 {
+    margin: 0 0 8px;
+}
+
+.trivia-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.categories a {
+    display: block;
+    padding: 8px 16px;
+    color: #0654b3;
+    text-decoration: none;
+    background: #fff;
+    border: 1px solid #0654b3;
+    border-radius: 5px;
+}
+
+.categories a:hover {
+    color: #fff;
+    background: #0654b3;
+}
+
+/* Scores */
+.scores-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.scores-table th,
+.scores-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.scores-table th {
+    color: white;
+    background-color: #333;
+}
+
+.scores-table tbody tr:hover {
+    background: #eef3fb;
+}
+
+/* Subscribe */
+.subscribe-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0654b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+.subscribe-btn:hover {
+    background-color: #043d82;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 84, 179, 0.5);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 12px rgba(6, 84, 179, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 84, 179, 0);
+    }
+}
+
+/* Contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    padding: 10px 0 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-top: 10px;
+    padding: 10px;
+    font-family: inherit;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form__btn {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0654b3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form__btn:hover {
+    background-color: #043d82;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f8a600;
+    outline-offset: 2px;
+}
+
+/* Футер */
+.site-footer {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #333;
+}
+
+.site-footer p {
+    margin: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .nav {
+        flex-wrap: wrap;
+    }
+
+    .trivia-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .trivia-item img {
+        margin: 0 0 10px;
+    }
+
+    .scores-table {
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .subscribe-btn {
+        animation: none;
+    }
+}

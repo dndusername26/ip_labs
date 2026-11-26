@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Trivia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav aria-label="Main navigation">
+            <ul class="nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#trivia">Trivia</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#scores">Scores</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section id="home">
+            <h1>World Trivia</h1>
+            <p>Welcome to World Trivia, a place for curious people. Every day we publish new questions about animals, science, history and geography. Test your knowledge, compare your results with players from other countries and learn something new.</p>
+        </section>
+
+        <section id="trivia">
+            <h2>Trivia</h2>
+            <article class="trivia-item">
+                <img src="assets/trivia-dog.jpg" alt="A French bulldog lying on a yellow background">
+                <div>
+                    <h3>Dogs and colors</h3>
+                    <p>Dogs see fewer colors than people. They mostly distinguish blue and yellow, while red looks to them like a dark gray.</p>
+                </div>
+            </article>
+            <article class="trivia-item">
+                <img src="assets/trivia-costumes.jpg" alt="Two small dogs wearing colorful jackets">
+                <div>
+                    <h3>Smart friends</h3>
+                    <p>An average dog can learn about 165 words and gestures. The smartest dogs can understand more than 250.</p>
+                </div>
+            </article>
+            <article class="trivia-item">
+                <img src="assets/trivia-cartoon.jpg" alt="A cartoon dog playing with a ball">
+                <div>
+                    <h3>Playtime</h3>
+                    <p>Dogs play not only for fun. Games help them train, stay healthy and build trust with their owners.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="categories">
+            <h2>Categories</h2>
+            <ul class="categories">
+                <li><a href="#">Animals</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Geography</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Movies</a></li>
+            </ul>
+        </section>
+
+        <section id="scores">
+            <h2>Scores</h2>
+            <table class="scores-table">
+                <caption class="visually-hidden">Top players of World Trivia</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Country</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Olena Kovalenko</td>
+                        <td>980</td>
+                        <td>Ukraine</td>
+                        <td>Science</td>
+                        <td>2026-11-20</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>James Miller</td>
+                        <td>955</td>
+                        <td>USA</td>
+                        <td>History</td>
+                        <td>2026-11-21</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Anna Schmidt</td>
+                        <td>930</td>
+                        <td>Germany</td>
+                        <td>Geography</td>
+                        <td>2026-11-18</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Marek Nowak</td>
+                        <td>905</td>
+                        <td>Poland</td>
+                        <td>Animals</td>
+                        <td>2026-11-22</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Sofia Rossi</td>
+                        <td>880</td>
+                        <td>Italy</td>
+                        <td>Movies</td>
+                        <td>2026-11-19</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="subscribe">
+            <h2>Subscribe</h2>
+            <p>Get a new question every morning.</p>
+            <button type="button" class="subscribe-btn" aria-label="Subscribe to Puzzle of the Day">Puzzle of the Day</button>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Have a question or an idea for a new quiz? Write to us and we will answer as soon as possible.</p>
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit" class="contact-form__btn">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 World Trivia. All rights reserved.</p>
+    </footer>
+</body>
+</html>
