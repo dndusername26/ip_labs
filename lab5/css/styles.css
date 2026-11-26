@@ -1,39 +1,127 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-
 }
+
 html {
     font-size: 10px;
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
 body {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
     line-height: 1.42857143;
     color: #333;
     background-color: #fff;
 }
-#events_container {
-    padding: 3rem 0 3rem 0;
+
+a {
+    color: #0076a8;
+    text-decoration: none;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    display: block;
+}
+
+/* Блок header#events_container */
 #events_container {
     background: #252775;
     padding: 3rem 0 0 0;
-}
-#block-lpnu-main-menu, .region-sidebar-second, .logo, .page-header, #hero, #block-lpnushortcutstop4, #featured_container h2, #events_container, .news_teaser, .block-views-blockfront-page-news-block-3 h2, .paragraph--type--person-with-description .field--name-field-person-name, .view-header h1 {
-    font-family: 'Roboto Condensed';
+    font-family: 'Roboto Condensed', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
-    display: block;
+
+#events_container .container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
-header {
-    display: block;
-    unicode-bidi: isolate;
+
+#events_container .view-header h2 {
+    margin: 0 0 3rem 0;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2.2rem;
+    text-align: center;
+}
+
+#events_container .view-header h2 a {
+    color: #fff;
+}
+
+/* Сітка: 2 колонки на малих екранах, 3 на середніх, 6 на великих */
+#events_container .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1.5rem;
+}
+
+#events_container .views-col {
+    position: relative;
+    width: 50%;
+    padding: 0 1.5rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+    #events_container .views-col {
+        width: 33.33333333%;
+    }
+}
+
+@media (min-width: 1200px) {
+    #events_container .views-col {
+        width: 16.66666667%;
+    }
+}
+
+/* Картка події */
+#events_container .views-field {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+}
+
+#events_container .field-content,
+#events_container .field-content > a {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+#events_container img {
+    width: 100%;
+    opacity: 0.85;
+}
+
+#events_container .event_date {
+    padding: 1.5rem;
+    color: #0076a8;
+    text-align: center;
+}
+
+#events_container h3 {
+    flex: 1;
+    margin: 0;
+    padding: 1.5rem;
+    background-color: #f6f6f6;
+    color: #0076a8;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+#events_container a:hover h3 {
+    text-decoration: underline;
 }

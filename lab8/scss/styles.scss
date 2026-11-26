@@ -1,0 +1,210 @@
+// ===== Змінні: кольори =====
+$primary-color: #252775;
+$secondary-color: #0076a8;
+$text-color: #333;
+$light-color: #f6f6f6;
+$white-color: #fff;
+
+// ===== Змінні: розміри шрифтів =====
+$font-size-root: 10px;
+$font-size-base: 1.6rem;
+$font-size-card: 1.8rem;
+$font-size-medium: 2rem;
+$font-size-large: 2.4rem;
+
+// ===== Змінні: шрифти та відступи =====
+$font-main: 'Roboto', sans-serif;
+$font-condensed: 'Roboto Condensed', sans-serif;
+$gap: 1.5rem;
+$gap-large: 3rem;
+$container-width: 1170px;
+
+// ===== Брейкпоінти та міксина =====
+$breakpoints: (
+    mobile: 576px,
+    tablet: 768px,
+    desktop: 1024px
+);
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    }
+}
+
+// ===== Базові стилі =====
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $font-size-root;
+}
+
+body {
+    font-family: $font-main;
+    font-size: $font-size-base;
+    line-height: 1.42857143;
+    color: $text-color;
+    background-color: $white-color;
+}
+
+a {
+    color: $secondary-color;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+// ===== header#events_container (Flexbox) =====
+#events_container {
+    display: block;
+    padding: $gap-large 0 0 0;
+    background: $primary-color;
+    font-family: $font-condensed;
+
+    .container {
+        width: 100%;
+        max-width: $container-width;
+        margin: 0 auto;
+        padding: 0 $gap;
+    }
+
+    .view-header h2 {
+        margin-bottom: $gap-large;
+        font-size: $font-size-medium;
+        font-weight: 500;
+        line-height: 2.2rem;
+        text-align: center;
+
+        a {
+            color: $white-color;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 (-$gap);
+    }
+
+    // Mobile: 1 колонка
+    .views-col {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0 $gap;
+        margin-bottom: $gap-large;
+
+        // Tablet: 2 колонки
+        @include respond-to(tablet) {
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+
+        // Desktop: 4 колонки
+        @include respond-to(desktop) {
+            flex-basis: 25%;
+            max-width: 25%;
+        }
+    }
+
+    .views-field {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        background-color: $white-color;
+    }
+
+    .field-content,
+    .field-content > a {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    img {
+        width: 100%;
+        opacity: 0.85;
+    }
+
+    .event_date {
+        padding: $gap;
+        color: $secondary-color;
+        text-align: center;
+    }
+
+    h3 {
+        flex: 1;
+        padding: $gap;
+        background-color: $light-color;
+        color: $secondary-color;
+        font-size: $font-size-card;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    a:hover h3 {
+        text-decoration: underline;
+    }
+}
+
+// ===== main: блок «Новини університету» (Grid) =====
+.main-container {
+    width: 100%;
+    max-width: $container-width;
+    margin: 0 auto;
+    padding: 0 $gap;
+}
+
+.news-block__title {
+    margin: $gap-large 0;
+    font-family: $font-condensed;
+    font-size: $font-size-large;
+    font-weight: 400;
+    line-height: 1.1;
+    text-align: center;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap-large;
+    margin-bottom: $gap-large;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond-to(desktop) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.news {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: $gap;
+    background-color: $light-color;
+    border-top: 3px solid $primary-color;
+
+    h2 {
+        margin-bottom: $gap;
+        font-family: $font-condensed;
+        font-size: $font-size-medium;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    &__more:hover {
+        text-decoration: underline;
+    }
+}
